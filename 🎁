@@ -13,7 +13,7 @@
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/simon-zerisenay/42-ft_printf?color=blue">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/simon-zerisenay/42-ft_printf?color=green">
 </p>
-<p>Welcome to ft_printf! This project from 42 Abu Dhabi focuses on creating a custom implementation of the printf function in C. It helps you understand variadic functions and string formatting.</p>
+<p>Welcome to ft_printf! This project from 1337 morocco focuses on creating a custom implementation of the printf function in C. It helps you understand variadic functions and string formatting.</p>
 
 <h2>Objective</h2>
 <p>Recreate the printf function to deepen your understanding of its mechanics, including string manipulation, format specifiers, and variadic arguments.</p>
