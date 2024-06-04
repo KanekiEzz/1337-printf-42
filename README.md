@@ -4,11 +4,8 @@
     <img src="https://github.com/KanekiEzz/kaneki_badges/blob/main/ft_printfn.png?raw=true" alt="42 Badge">
   </a>
 </p>
-<p align="center">
-  <img src="https://github.com/simon-zerisenay/simon-zerisenay/blob/main/100.png" alt="100" width="100" height="70">
-</p>
 
-<h2>Introduction</h2>
+<h2 >Introduction</h2>
 <p align="center">
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/simon-zerisenay/42-ft_printf?color=lightblue">
   <img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/simon-zerisenay/42-ft_printf?color=critical">
