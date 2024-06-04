@@ -1,4 +1,4 @@
-<h1 align="center">ft_printf - 42 Abu Dhabi</h1>
+<h1 align="center">ft_printf - 42 kaneki</h1>
 <p align="center">
   <a href="https://github.com/simon-zerisenay/42-ft_printf">
     <img src="https://github.com/mcombeau/mcombeau/blob/main/42_badges/ft_printfm.png" alt="42 Badge">
