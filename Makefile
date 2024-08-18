@@ -1,31 +1,26 @@
-NAME = libftprintf.a
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
-SRC = ft_printf.c\
-	ft_print_char.c\
-	ft_print_nbr.c\
-	ft_print_str.c\
-	ft_print_uns.c\
-	ft_print_hex.c\
-	ft_print_adrs.c\
+MANSRCS = ft_printf.c ft_putchar.c ft_putstr.c ft_convert_base.c ft_print_nbr.c
 
-OBJ = $(SRC:.c=.o)
+MANOBJS = $(MANSRCS:.c=.o)
+NAME = libftprintf.a
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+$(NAME): $(MANOBJS)
+	ar -rcs $(NAME) $(MANOBJS)
 
-%.o: %.c ft_printf.h
-	$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.c libftprintf.h
+	cc -Wall -Wextra -Werror -c $< -o $@
+
+test: $(NAME) main.o
+	cc -o main main.o $(NAME)
+	./main
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(MANOBJS) main.o
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) main
 
 re: fclean all
 
-.PHONY: clean
-
+.PHONY: all clean fclean re bonus test

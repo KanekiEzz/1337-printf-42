@@ -1,0 +1,22 @@
+See also
+va_copy
+      makes a copy of the variadic function arguments
+(function macro)
+
+va_end
+      ends traversal of the variadic function arguments
+(function macro)
+
+va_list
+        holds the information needed by va_start, va_arg, va_end, and va_copy
+(typedef)
+
+va_start
+        enables access to variadic function arguments
+(function macro)
+
+function(int count, ...)
+va_list ptr;
+va_start(ptr, count);
+va_arg(ptr, int);
+va_end(ptr);
