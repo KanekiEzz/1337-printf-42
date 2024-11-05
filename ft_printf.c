@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 04:28:23 by iezzam            #+#    #+#             */
-/*   Updated: 2024/11/05 01:29:29 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/11/05 04:10:45 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,8 @@ void	ft_format_printf(va_list args, char format_sp, int *count)
 		ft_convert_base(va_arg(args, unsigned int), 16, "0123456789abcdef",
 			count);
 	else if (format_sp == 'X')
-	{
 		ft_convert_base(va_arg(args, unsigned int), 16, "0123456789ABCDEF",
 			count);
-	}
 	else if (format_sp == 'p')
 	{
 		ft_putstr("0x", count);
