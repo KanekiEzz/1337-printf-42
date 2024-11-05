@@ -1,53 +1,72 @@
-#include "ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/03 04:28:23 by iezzam            #+#    #+#             */
+/*   Updated: 2024/11/05 01:29:29 by iezzam           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_format_printf(va_list args, char fi, int *count)
+#include "ft_printf.h"
+#include <stdio.h>
+
+void	ft_format_printf(va_list args, char format_sp, int *count)
 {
-	if (fi == '%')
+	if (format_sp == '%')
 		ft_putchar('%', count);
-	else if (fi == 'c')
+	else if (format_sp == 'c')
 		ft_putchar((char)va_arg(args, int), count);
-	else if (fi == 's')
+	else if (format_sp == 's')
 		ft_putstr(va_arg(args, char *), count);
-	else if (fi == 'd' || fi == 'i')
-		ft_print_nbr(va_arg(args, int), count);
-	else if (fi == 'u')
+	else if (format_sp == 'd' || format_sp == 'i')
+		ft_putnbr(va_arg(args, int), count);
+	else if (format_sp == 'u')
 		ft_convert_base(va_arg(args, unsigned int), 10, "0123456789", count);
-	else if (fi == 'x')
-		ft_convert_base(va_arg(args, unsigned int), 16, "0123456789abcdef", count);
-	else if (fi == 'X')
-		ft_convert_base(va_arg(args, unsigned int), 16, "0123456789ABCDEF", count);
-	else if (fi == 'p')
+	else if (format_sp == 'x')
+		ft_convert_base(va_arg(args, unsigned int), 16, "0123456789abcdef",
+			count);
+	else if (format_sp == 'X')
+	{
+		ft_convert_base(va_arg(args, unsigned int), 16, "0123456789ABCDEF",
+			count);
+	}
+	else if (format_sp == 'p')
 	{
 		ft_putstr("0x", count);
-		ft_convert_base((long long)va_arg(args, unsigned int), 16, "0123456789abcdef", count);
+		ft_convert_base_p(va_arg(args, unsigned long long), 16,
+			"0123456789abcdef", count);
 	}
 	else
-		ft_putchar(fi, count);
+		ft_putchar(format_sp, count);
 }
 
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
-	size_t i;
-	int count;
-	va_list args;
+	size_t	i;
+	int		count;
+	va_list	args;
 
-	if (write(1, "", 0) == -1 || !format)
+	i = 0;
+	count = 0;
+	if (!format)
 		return (-1);
 	va_start(args, format);
-	count = 0;
-	i = 0;
 	while (format[i])
 	{
 		if (format[i] != '%')
+		{
 			ft_putchar(format[i], &count);
+		}
 		else
 		{
 			i++;
 			if (format[i] != '\0')
 				ft_format_printf(args, format[i], &count);
 		}
-		if (format[i])
-			i++;
+		i++;
 	}
 	va_end(args);
 	return (count);
