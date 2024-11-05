@@ -6,12 +6,11 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 04:28:23 by iezzam            #+#    #+#             */
-/*   Updated: 2024/11/05 04:10:45 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/11/05 05:51:03 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 void	ft_format_printf(va_list args, char format_sp, int *count)
 {
@@ -55,9 +54,7 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] != '%')
-		{
 			ft_putchar(format[i], &count);
-		}
 		else
 		{
 			i++;
