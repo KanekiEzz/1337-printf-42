@@ -54,7 +54,7 @@ $(NAME): $(OBJS)
         ##    ## ##     ## ##    ## ######## ##    ## #### $(NC)"
 	$(AR) $(NAME) $(OBJS)
 
-%.o: %.c 	libftprintf.h
+%.o: %.c 	ft_printf.h
 			$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
