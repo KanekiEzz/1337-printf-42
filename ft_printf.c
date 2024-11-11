@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 04:28:23 by iezzam            #+#    #+#             */
-/*   Updated: 2024/11/05 05:51:03 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/11/11 10:40:25 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ int	ft_printf(const char *format, ...)
 			if (format[i] != '\0')
 				ft_format_printf(args, format[i], &count);
 		}
+		if (format[i] == '\0')
+			break;
 		i++;
 	}
 	va_end(args);

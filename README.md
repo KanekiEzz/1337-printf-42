@@ -49,12 +49,12 @@
 
 <h2>Installation and Usage</h2>
 <ol>
-  <li>Clone the repository: <code>git clone https://github.com/your_username/42-ft_printf.git</code></li>
-  <li>Navigate to the project directory: <code>cd 42-ft_printf</code></li>
+  <li>Clone the repository: <code>git clone https://github.com/KanekiEzz/1337-printf-42 1337-printf-42</code></li>
+  <li>Navigate to the project directory: <code>cd 1337-printf-42</code></li>
   <li>Compile the library: <code>make</code></li>
-  <li>Run the executable: <code>./ft_printf</code></li>
+  <li>Run the executable: <code>cc main.c libftprintf.a  && ./a.out</code></li>
   OR:
-  <li>Compile the library: <code>gcc -o ft_printf ft_printf.c ft_print_char.c ft_print_nbr.c ft_print_str.c rint_nbr.c ft_print_str.c ft_print_uns.c ft_print_hex.c ft_print_adrs.c </code></li>
+  <li>Compile the library: <code>cc -o ft_printf ft_printf.c ft_print_char.c ft_print_nbr.c ft_print_str.c rint_nbr.c ft_print_str.c ft_print_uns.c ft_print_hex.c ft_print_adrs.c </code></li>
   <li>Run the executable: <code>./ft_printf</code></li>
 </ol>
 <p>Refer to the documentation for detailed usage and examples.</p>
