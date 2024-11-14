@@ -1,7 +1,7 @@
 <h1 align="center">ft_printf - 42 kaneki</h1>
 <p align="center">
   <a href="https://github.com/KanekiEzz/printf42-">
-    <img src="https://github.com/KanekiEzz/kaneki_badges/blob/main/ft_printfn.png?raw=true" alt="42 Badge">
+    <img src="https://github.com/KanekiEzz/kaneki_badges/blob/main/ft_printfm.png?raw=true" alt="42 Badge">
   </a>
 </p>
 
